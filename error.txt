@@ -1,0 +1,9 @@
+
+Traceback (most recent call last):
+  File "/home/maisun/Desktop/asdf.py", line 193, in <module>
+    main()
+  File "/home/maisun/Desktop/asdf.py", line 171, in main
+    tb = top_block_cls()
+  File "/home/maisun/Desktop/asdf.py", line 82, in __init__
+    self.twoTypes_passthrough_0 = twoTypes.passthrough_cc(0)
+AttributeError: module 'twoTypes' has no attribute 'passthrough_cc'
