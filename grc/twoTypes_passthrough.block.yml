@@ -1,0 +1,30 @@
+id: twoTypes_passthrough
+label: passthrough
+category: '[twoTypes]'
+
+templates:
+  imports: import twoTypes
+  make: twoTypes.passthrough_${type.fcn}(${someNumber})
+
+parameters:
+-   id: type
+    label: Type
+    dtype: enum
+    options: [complex, byte]
+    option_attributes:
+        fcn: [cc, bb]
+    hide: part
+
+- id: someNumber  
+  label: This number does nothing
+  dtype: int
+  default: 0  
+
+inputs:
+- label: in
+  dtype: ${ type }
+
+outputs:
+- label: out
+  dtype: ${ type }
+file_format: 1
